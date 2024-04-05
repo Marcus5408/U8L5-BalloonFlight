@@ -6,8 +6,9 @@ from balloon import Balloon
 # set up pygame modules
 pygame.init()
 pygame.font.init()
-my_font = pygame.font.Font("u8l5_balloonflight/frenchFries-Regular.ttf", 48)
-subtitle_font = pygame.font.Font("u8l5_balloonflight/frenchFries-Regular.ttf", 24)
+file_dir = __file__.replace("__init__.py", "")
+my_font = pygame.font.Font(f"{file_dir}frenchFries-Regular.ttf", 48)
+subtitle_font = pygame.font.Font(f"{file_dir}frenchFries-Regular.ttf", 24)
 pygame.display.set_caption("Balloon Flight!")
 
 
@@ -16,7 +17,6 @@ size = (800, 600)
 screen = pygame.display.set_mode(size)
 BIRD_START_X = 800
 
-file_dir = __file__.replace("__init__.py", "")
 bg = pygame.image.load(f"{file_dir}background.png")
 house = pygame.image.load(f"{file_dir}house.png")
 tree = pygame.image.load(f"{file_dir}tree.png")
